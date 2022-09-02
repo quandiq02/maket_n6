@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./icons/css/all.css">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Profile</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__search">
+                    <input type="checkbox" name="toggle" id="toggle_1" class="toggle__input">
+                    <label for="toggle_1" class="search__title">
+                        <img src="./images/header/search.svg" alt="">
+                    </label>
+                    <label for="toggle_1" class="search__title">
+                        <img src="./images/header/times.svg" alt="times">
+                    </label>
+                    <input type="search" name="search" id="search_1" class="search__input" placeholder="Search">
+                    <label for="search_1" class="search__btn">
+                        <img src="./images/header/search.svg" alt="">
+                    </label>
+                </div>
+                <a href="./index.html" class="header__logo">
+                    <img src="./images/header/logo.svg" alt="">
+                </a>
+                <div class="header__menu menu">
+                    <input type="checkbox" name="menu" id="menu_1" class="menu__input">
+                    <label for="menu_1" class="menu__title">
+                        <img src="./images/header/h-menu.svg" alt="h-menu">
+                        <img src="./images/header/times.svg" alt="times">
+                    </label>
+                    <ul class="menu__list">
+                        <!-- <li class="menu__item"><a href="./catalog.html" class="menu__link">Guitarists</a></li>
+                        <li class="menu__item"><a href="./catalog.html" class="menu__link">Pianists</a></li>
+                        <li class="menu__item"><a href="./catalog.html" class="menu__link">Drums</a></li>
+                        <li class="menu__item"><a href="./catalog.html" class="menu__link">Vocals</a></li>
+                        <li class="menu__item"><a href="./catalog.html" class="menu__link">Category1</a></li> -->
+                        <a href="#" class="menu__btn-logout">
+                            Log out
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="user">
+        <div class="container">
+            <div class="user__wrapper">
+                <div class="user__block-1">
+                    <div class="user__name">
+                        @nickportman
+                    </div>
+                    <a href="#" class="user__img">
+                        <img src="./images/tab/2.jpg" alt="">
+                    </a>
+                    <ul class="user__booking booking__list">
+                        <li class="booking__item">
+                            <a href="#" class="booking__link">
+                                I want to work with you...
+                            </a>
+                            <span>2</span>
+                        </li>
+                        <li class="booking__item">
+                            <a href="#" class="booking__link">
+                                I want to work with you...
+                            </a>
+                            <span>2</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user__block-2">
+                    <div class="order">
+                        <div class="order__wrapper">
+                            <div class="order__title">
+                                My orders
+                            </div>
+                            <ul class="order__list">
+                                <li class="order__item">
+                                    <div class="order__desc">
+                                        <span>1</span>
+                                        <p>Order Description #1</p>
+                                    </div>
+                                    <a href="#" class="order__info">
+                                        More information
+                                    </a>
+                                    <div class="order__price">
+                                        10$
+                                    </div>
+                                    <div class="order__date">
+                                        20.06.2022
+                                    </div>
+                                </li>
+                                <li class="order__item">
+                                    <div class="order__desc">
+                                        <span>2</span>
+                                        <p>Order Description #2</p>
+                                    </div>
+                                    <a href="#" class="order__info">
+                                        More information
+                                    </a>
+                                    <div class="order__price">
+                                        10$
+                                    </div>
+                                    <div class="order__date">
+                                        20.06.2022
+                                    </div>
+                                </li>
+                                <li class="order__item">
+                                    <div class="order__desc">
+                                        <span>3</span>
+                                        <p>Order Description #3</p>
+                                    </div>
+                                    <a href="#" class="order__info">
+                                        More information
+                                    </a>
+                                    <div class="order__price">
+                                        10$
+                                    </div>
+                                    <div class="order__date">
+                                        20.06.2022
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service__wrapper">
+                            <div class="service__title">
+                                My services
+                            </div>
+                            <ul class="service__list">
+                                <li class="service__item">
+                                    <div class="service__desc">
+                                        <span>1</span>
+                                        <p>Guitar</p>
+                                    </div>
+                                    <a href="#" class="service__info">
+                                        More information
+                                    </a>
+                                    <div class="service__price">
+                                        10$
+                                    </div>
+                                </li>
+                                <li class="service__item">
+                                    <div class="service__desc">
+                                        <span>2</span>
+                                        <p>Piano</p>
+                                    </div>
+                                    <a href="#" class="service__info">
+                                        More information
+                                    </a>
+                                    <div class="service__price">
+                                        10$
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="personal">
+                        <div class="personal__wrapper">
+                            <div class="personal__title">
+                                Purchased for me
+                            </div>
+                            <ul class="personal__list">
+                                <li class="personal__item">
+                                    <div class="personal__desc">
+                                        <span>1</span>
+                                        <p>Guitar</p>
+                                    </div>
+                                    <a href="#" class="personal__info">
+                                        More information
+                                    </a>
+                                    <div class="personal__price">
+                                        10$
+                                    </div>
+                                </li>
+                                <li class="personal__item">
+                                    <div class="personal__desc">
+                                        <span>2</span>
+                                        <p>Piano</p>
+                                    </div>
+                                    <a href="#" class="personal__info">
+                                        More information
+                                    </a>
+                                    <div class="personal__price">
+                                        10$
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href="./index.html" class="footer__logo">
+                    <img src="./images/header/logo.svg" alt="">
+                </a>
+                <ul class="footer__list-elem1">
+                    <li class="footer__item"><a href="#" class="footer__link">Modile app</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Community</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                </ul>
+                <ul class="footer__list-elem2">
+                    <li class="footer__item"><a href="#" class="footer__link">Help desk</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Resources</a></li>
+                </ul>
+                <div class="footer__copyright">
+                    &copy; 2022 Session artist All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
