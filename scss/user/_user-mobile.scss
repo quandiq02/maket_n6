@@ -1,0 +1,116 @@
+.user {
+    &__wrapper {
+        @include flex(inherit,inherit);
+        flex-direction: column;
+    }
+    &__block-1 {
+        @include flex(inherit,inherit);
+        flex-direction: column;
+    }
+    &__name {
+        margin: 15px 0;
+        @include font(24px, $ffOswaldReg, 400, #000, inherit, left, 36px);
+    }
+    &__img {
+        width: 290px;
+        height: 232px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__booking {margin-top: 10px;
+    }
+    &__block-2 {
+        @include flex(inherit,inherit);
+        flex-direction: column;
+    }
+}
+.container {
+    padding: 0 15px;
+}
+.booking {
+    &__list {
+        list-style-type: none;
+    }
+    &__item {
+        background: rgba(0, 113, 99, 0.1);
+        border-radius: 5px;
+        margin-top: 10px;
+        @include flex(space-between,inherit);
+        align-items: center;
+        min-height: 45px;
+        padding: 0 15px;
+        span{
+            width: 25px;
+            height: 25px;
+            color: #fff;
+            border-radius: 50%;
+            background: $color-accent;
+            border: 1px solid $color-accent;
+            @include flex(center,inherit);
+            align-self: center;
+            padding-top: 1px;
+
+        }
+    }
+    &__link {
+        flex-direction: row;
+            @include font(16px, $ffInterReg, 400, #000, inherit, center, 19px); 
+    }
+}
+.order,.service,.personal {
+
+    &__title {
+        margin-top: 30px;
+    @include font(20px,$ffInterSemiBold,600,#000,inherit,left,24px);
+    }
+    &__list {
+        margin-top: 15px;
+        border: 1px solid $color-secondary;
+        border-radius: 5px;
+        list-style-type: none;
+    }
+    &__item {
+        padding: 15px;
+    }
+    &__item:not(:last-child){
+        border-bottom: 1px solid $color-secondary;
+
+    }
+    &__desc {
+        @include flex(inherit,inherit);
+        align-items: center;
+        @include font(16px, $ffInterReg, 400, #000, inherit, center, 19px); 
+        p{
+            margin-left: 10px;
+        }
+        span{
+            @include flex(center,inherit);
+              align-items: center;
+            background: rgba(0, 113, 99, 0.2);
+            border-radius: 50%;
+            color: $color-accent;
+            height: 30px;
+            width: 30px;
+        }
+    }
+    &__info {
+        display: block;
+        margin-top: 15px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px); 
+
+    }
+    &__price {
+        margin-top: 15px;
+        @include font(18px, $ffInterSemiBold, 600, $color-tertiary, inherit, left, 22px);
+
+    }
+    &__date {
+        margin-top: 15px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px); 
+
+    }
+}
+ 

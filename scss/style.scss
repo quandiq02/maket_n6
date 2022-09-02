@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+@import "./mixins";
+
+@import "./header/header-mobile";
+@import "./header/header-desktop";
+
+@import "./main/main-mobile";
+@import "./main/main-desktop";
+
+@import "./social/social-mobile";
+@import "./social/social-desktop";
+
+@import "./footer/footer-mobile";
+@import "./footer/footer-desktop";
+
+@import "./catalog/tab/tab-mobile";
+@import "./catalog/tab/tab-desktop";
+
+@import "./profile/profile-mobile";
+@import "./profile/profile-desktop";
+
+
+@import "./reviews/reviews-mobile";
+
+@import "./user/user-mobile";
+@import "./user/user-desktop";

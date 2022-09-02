@@ -1,0 +1,71 @@
+.reviews {
+    &__title {
+        margin-top: 50px;
+        @include font(20px, $ffOswaldReg, 400, #000, capitalize, left, 30px);
+        span{
+            margin-left: 15px;
+        }
+    }
+
+    &__wrapper {
+        @include flex(inherit, inherit);
+        flex-direction: column;
+        border: 1px solid $color-secondary;
+        border-radius: 5px;
+        padding: 18px 13px 20px 15px;
+        margin-top: 15px;
+    }
+    &__wrapper:last-child{
+        display: none
+    }
+
+    &__profile {
+        @include flex(inherit, inherit);
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__profile-img {
+        background-color: $color-accent;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        @include flex(center, inherit);
+        align-items: center;
+        @include font(16px, $ffInterReg, 400, #fff, inherit, center, 22px);
+    }
+
+    &__profile-info {
+        margin-left:10px;
+        @include flex(space-between,inherit);
+        flex-direction: column;
+    }
+
+    &__text {
+        margin-top: 14px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 22px);
+
+    }
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.info {
+    &__name {
+        margin-bottom: 5px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, center, 19px);
+       span{
+        margin-left: 5px;
+       }
+        img{
+            transform: translateY(2px)
+        }
+    }
+
+    &__lastseen {
+        @include font(16px, $ffInterReg, 400,$color-tertiary, inherit, left, 19px);
+
+    }
+}

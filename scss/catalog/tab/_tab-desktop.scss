@@ -1,0 +1,91 @@
+@media (min-width:1170px) {
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .tab {
+        &__wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: baseline;
+        }
+
+        &__title {
+            position: relative;
+            @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+            flex-basis: 15%;
+            padding: 5px 0;
+            @include flex(space-around, inherit);
+            align-items: center;
+
+        }
+
+        @for $i from 1 to 10 {
+            &__title-elem#{$i} {
+                &::after {
+                    @include pseudo;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -10px;
+                    height: 2px;
+                    width: 70%;
+                    background-color: $color-accent;
+                    opacity: 0;
+                    transition: all 400ms linear;
+                }
+            }
+        }
+
+
+        &__maintitle {
+            align-self: flex-start;
+            flex-basis: 100%;
+            display: none
+        }
+
+        &__content {
+            @include flex(space-between, wrap);
+            flex-direction: row;
+            display: none;
+        }
+
+        @for $i from 1 to 10 {
+            #radio_#{$i}:checked~.tab__title-elem#{$i} {
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            #radio_#{$i}:checked~.tab__maintitle-item#{$i} {
+                display: block;
+            }
+
+            #radio_#{$i}:checked~.tab__content-item#{$i} {
+                display: flex;
+            }
+        }
+    }
+
+    .content {
+        &__wrapper {
+            max-width: 360px;
+        }
+
+        &__wrapper:nth-child(5),
+        &__wrapper:nth-child(6) {
+            display: flex;
+        }
+
+        &__img {
+            width: 330px;
+            height: 264px;
+        }
+    }
+
+    .pagination {
+        align-self: flex-start;
+        flex-basis: 100%;
+    }
+}

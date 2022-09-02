@@ -1,0 +1,159 @@
+.profile {
+    &__wrapper {
+        @include flex(inherit, inherit);
+        flex-direction: column
+    }
+
+    &__name {
+        margin: 15px 0;
+        @include font(24px, $ffOswaldReg, 400, #000, inherit, left, 36px);
+
+    }
+
+    &__img {
+        width: 290px;
+        height: 232px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__about {
+        margin-top: 15px;
+        font-style: italic;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 22px);
+    }
+
+    &__btn {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        @include flex(center, inherit);
+        align-items: center;
+        background-color: $color-accent;
+        border-radius: 5px;
+        @include font(18px, $ffInterSemiBold, 600, #fff, inherit, center, 22px);
+    }
+
+    &__sub {
+        margin-top: 30px;
+        @include flex(inherit, wrap);
+    }
+}
+
+.container {
+    padding: 0 15px;
+}
+.content__wrap{
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 20px 25px 20px;
+
+}
+.sub {
+    &__input {
+        appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &__title {
+        @include font(16px, $ffInterReg, 400, #000, inherit, center, 19px);
+        flex-basis: 33%;
+        position: relative;
+        padding: 10px 0;
+        &::before{
+            @include pseudo;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            height: 1px;
+            width: 100%;
+            background-color: $color-secondary;
+            transition: all 400ms linear;
+        }
+    }
+    @for $i from 1 to 4 {
+        &__title-item#{$i}{
+            &::after{
+                @include pseudo;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0px;
+                height: 1px;
+                width: 100%;
+                background-color: $color-accent;
+                opacity: 0;
+                transition: all 400ms linear;
+            }
+        } 
+    }
+    &__content {
+      
+        @include flex(inherit,inherit);
+        flex-direction: column;
+        display:none;
+    }
+
+    &__price {
+        @include font(18px, $ffInterSemiBold, 600, $color-tertiary, inherit, left, 22px);
+    }
+
+    &__time {
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+        margin-top: 10px;
+        
+    }
+
+    &__revision {
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+        
+        margin-top: 10px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-secondary;
+    }
+
+    &__list {
+        margin-top: 3px;
+        list-style-type: none
+    }
+    
+    &__item {
+        margin-top: 10px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+    }
+
+    &__item:nth-child(1),
+    &__item:nth-child(4) {
+        color: $color-secondary;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        @include flex(center, inherit);
+        align-items: center;
+        width: 165px;
+        height: 40px;
+        border: 1px solid $color-accent;
+        border-radius: 5px;
+        @include font(18px, $ffInterSemiBold, 600, $color-accent, inherit, center, 22px);
+    }
+}
+
+@for $i from 1 to 4 {
+    #sub_#{$i}:checked ~ .sub__content-item#{$i}{
+
+        display: flex;
+    }
+    #sub_#{$i}:checked ~ .sub__title-item#{$i}{
+        &::after{
+            opacity: 1;
+        }
+    }
+    
+}

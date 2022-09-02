@@ -1,0 +1,46 @@
+.footer {
+    &__wrapper {
+        margin-top: 60px;
+        @include flex(space-around, wrap);
+    }
+
+    &__logo {
+        display: flex;
+        @include flex(center, wrap);
+        align-self: center;
+        flex-basis: 100%;
+    }
+
+    &__list-elem1 {
+        margin-top: 28px;
+        list-style-type: none;
+        flex-basis: 40%;
+    }
+
+    &__list-elem2 {
+        align-self: flex-end;
+        margin-top: 28px;
+        list-style-type: none;
+        flex-basis: 40%;
+
+    }
+
+    &__item+&__item {
+        margin-top: 20px;
+    }
+
+    &__link {
+        @include font(16px, $ffInterReg, 400, #000, capitalize, center, 19px);
+    }
+
+    &__copyright {
+        margin-top: 30px;
+        @include font(14px, $ffRubikReg, 400, #000, capitalize, center, 17px);
+
+
+    }
+}
+
+.container {
+    padding: 0 15px;
+}

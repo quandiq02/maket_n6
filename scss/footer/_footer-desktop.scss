@@ -1,0 +1,50 @@
+@media (min-width:1170px) {
+      .container {
+            width: 1140px;
+            margin: 0 auto;
+            overflow-x: hidden;
+      }
+
+      .footer {
+            &__wrapper {
+                  justify-content: space-between;
+                  align-items: center;
+            }
+
+            &__logo {
+                  flex-basis: auto;
+                  order: 2;
+                  margin-right: 65px;
+            }
+
+            &__list-elem1 {
+                  flex-basis: auto;
+                  @include flex(inherit, inherit);
+                  order: 1;
+                  margin-top: 0;
+
+            }
+
+            &__item+&__item {
+                  margin-top: 0;
+                  margin-left: 50px;
+            }
+
+            &__list-elem2 {
+                  flex-basis: auto;
+                  @include flex(inherit, inherit);
+                  order: 2;
+                  margin-top: 0;
+                  align-self: center;
+
+
+            }
+
+            &__copyright {
+                  flex-basis: 100%;
+                  order: 4;
+                  margin-bottom: 15px;
+            }
+      }
+
+}

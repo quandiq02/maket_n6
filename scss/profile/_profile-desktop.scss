@@ -1,0 +1,40 @@
+@media (min-width:1170px) {
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+    .profile {
+		&__wrapper {
+            flex-basis: 263px;
+            justify-content: flex-start;
+		}
+            &__img{
+                  width: 263px;
+                  height: 210px
+            }
+        &__main-wrap{
+        @include flex(space-between,inherit);
+        }
+		&__sub {
+            flex-basis: 68%;
+            justify-content: flex-start;
+		}
+}
+
+.sub {
+
+		&__title {
+            flex-basis: auto;
+            flex-basis: 10%;
+		}
+
+		&__title-item2 {
+            margin-left: 20px;
+		}
+		&__title-item3 {
+            margin-left: 20px;
+		}
+
+}
+}

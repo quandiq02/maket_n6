@@ -1,0 +1,194 @@
+.tab {
+    position: relative;
+
+    &__wrapper {
+        @include flex(center, wrap);
+        flex-direction: column;
+
+    }
+
+    &__input {
+        appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &__maintitle {
+        margin-top: 15px;
+        @include font(24px, $ffOswaldReg, 400, #000, inherit, left, 36px);
+    }
+
+    &__maintitle:not(:first-of-type) {
+        display: none;
+    }
+
+    &__title {
+        display: none;
+    }
+
+    @for $i from 2 to 9 {
+        &__content-item#{$i} {
+            display: none;
+        }
+    }
+
+
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.content {
+    &__wrapper {
+        @include flex(center, inherit);
+        flex-direction: column;
+        border: 1px solid $color-secondary;
+        border-radius: 5px;
+        padding: 15px 15px 20px 15px;
+        margin-top: 15px;
+
+    }
+
+    &__wrapper:nth-child(5),
+    &__wrapper:nth-child(6) {
+        display: none;
+    }
+
+    &__img {
+        position: relative;
+        width: 260px;
+        height: 208px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .like__btn {
+            appearance: none;
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .like__title {
+            @include flex(center, inherit);
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #FFFCF6;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+
+            i {
+                color: #ebebeb;
+            }
+        }
+
+        @for $i from 1 to 10 {
+            #like_#{$i}:checked~.like__title>i {
+                color: $color-accent;
+            }
+        }
+
+    }
+
+    &__profile {
+        margin: 15px 0;
+    }
+
+    &__about {
+        padding-top: 20px;
+        position: relative;
+
+        &::after {
+            @include pseudo;
+            top: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #D6D0C1;
+        }
+
+        font-style: italic;
+
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 22px);
+
+
+    }
+
+    &__buttons {
+        margin-top: 15px;
+        @include flex(space-around, inherit);
+        align-items: center;
+    }
+
+    &__price {
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+
+        span {
+            color: $color-tertiary;
+            font-weight: 700
+        }
+    }
+
+    &__btn {
+        @include flex(center, inherit);
+        align-items: center;
+        width: 120px;
+        height: 40px;
+        background-color: $color-accent;
+        border-radius: 5px;
+        @include font(18px, $ffInterSemiBold, 600, #fff, inherit, center, 22px);
+
+    }
+}
+
+.profile {
+    @include flex(space-between, inherit);
+    align-items: center;
+
+    &__name {
+        @include font(18px, $ffOswaldReg, 400, #000, inherit, left, 27px);
+    }
+
+    &__rating {
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+
+        img {
+            transform: translateY(2px);
+        }
+    }
+}
+
+.pagination {
+    @include flex(baseline, inherit);
+
+    &__btn {
+        margin-top: 30px;
+        @include font(16px, $ffInterReg, 400, #000, inherit, left, 19px);
+        @include flex(center, inherit);
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: 1px solid $color-accent;
+    }
+
+    &__btn:nth-child(2) {
+        background-color: $color-accent;
+        color: #fff;
+    }
+
+    &__btn:last-child {
+        @include bgImg(url('../images/tab/gt.svg'), no-repeat, center center);
+        background-size: 15px 15px;
+    }
+
+    &__btn+&__btn {
+        margin-left: 12px;
+    }
+}

@@ -1,0 +1,113 @@
+@media (min-width:1170px) {
+
+    .main {
+        &__wrapper {
+            overflow: hidden;
+            position: relative;
+            background-image: none;
+            &::after {
+                @include pseudo;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0%;
+                background-image: url(../images/pattern-bg.svg), url(../images/pattern-bg.svg);
+                background-position: -20px 50px, -30px 40px;
+                background-size: contain, contain;
+                background-repeat: no-repeat, no-repeat;
+                transform: rotate(20deg);
+                z-index: -1;
+            }
+            &::before {
+                @include pseudo;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0%;
+                background-image: url(../images/pattern-bg.svg), url(../images/pattern-bg.svg);
+                background-position: 580px -10px,580px -20px;
+
+                background-size: contain, contain;
+                background-repeat: no-repeat, no-repeat;
+                transform: rotate(-15deg);
+                z-index: -1;
+            }
+        }
+
+        &__title {
+            position: relative;
+            font-size: 64px;
+            line-height: 80px;
+            max-width: 540px;
+            margin-top: 20px;
+            align-self: center;
+
+            .blur1 {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: 20%;
+                top: 30%;
+
+                background: $color-accent;
+                opacity: 0.2;
+                filter: blur(100px);
+            }
+
+            .blur2 {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                right: 20%;
+                top: 30%;
+
+                background: $color-accent;
+                opacity: 0.2;
+                filter: blur(100px);
+            }
+
+
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &__link {
+            width: 165px
+        }
+
+        &__btn {
+            @include flex(center, inherit);
+        }
+
+        &__btn-link {
+            width: 165px;
+            height: 45px;
+
+            &:first-of-type {
+                margin-right: 15px;
+            }
+
+            &:last-of-type {
+                margin-left: 15px;
+            }
+        }
+
+        &__item {
+            @for $i from 3 to 7 {
+                &:nth-child(#{$i}) {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+}
